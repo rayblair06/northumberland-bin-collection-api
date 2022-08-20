@@ -1,0 +1,19 @@
+version: "3.7"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./Dockerfile.dev
+    volumes:
+        - ./:/app
+        - /app/node_modules
+    networks:
+      - app
+    ports:
+      - "${APP_PORT}:${APP_PORT}"
+    command: nodemon ./src/server.ts -r dotenv/config
+
+networks:
+  app:
+    driver: bridge

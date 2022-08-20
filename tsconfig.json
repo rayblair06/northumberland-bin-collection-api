@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+      "noEmit": true,
+      "strict": true,
+      "noImplicitAny": false,
+      "isolatedModules": true,
+      "forceConsistentCasingInFileNames": true,
+      "esModuleInterop": true,
+      "useUnknownInCatchVariables": false,
+      "lib": [
+        "ES2021.String"
+      ]
+    }
+  }
